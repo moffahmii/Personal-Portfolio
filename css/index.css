@@ -1,0 +1,301 @@
+.main-font {
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    width: 75%;
+}
+
+.second-font {
+    font-family: "Poppins", sans-serif;
+}
+
+main.color {
+    color: #343434
+}
+
+.p-color {
+    color: rgba(116, 129, 130, 1) !important;
+}
+
+.heading {
+    position: relative;
+    display: inline-block;
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.heading::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 30px;
+    margin-top: -13%;
+    background-image: radial-gradient(rgba(153, 153, 153, 0.4) 20%, transparent 21%);
+    background-size: 15px 15px;
+    background-repeat: repeat;
+    background-position: center top;
+}
+
+/* NAVBAR */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease-in-out;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    transform: scaleX(1);
+}
+
+#mainNav {
+    transition: background-color 0.4s, box-shadow 0.4s;
+}
+
+#mainNav .navbar-brand,
+#mainNav .nav-link {
+    color: #fff;
+    transition: color 0.4s ease;
+}
+
+#mainNav.scrolled {
+    background-color: #fff !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#mainNav.scrolled .navbar-brand,
+#mainNav.scrolled .nav-link {
+    color: #000;
+}
+
+/* HOME */
+#home {
+    background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/bg.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.home-icons a {
+    font-size: 8px;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* about */
+#about .about-pic::after {
+    content: "";
+    position: absolute;
+    left: -5%;
+    top: 5%;
+    width: 90%;
+    height: 100%;
+    background: url("../images/dots.png") repeat;
+    opacity: 0.9;
+    z-index: -1;
+}
+
+.about-content .space {
+    letter-spacing: 2px !important;
+}
+
+.progress {
+    height: 20px;
+    border-radius: 8px;
+    background: #eee;
+}
+
+.progress-bar {
+    width: 0;
+    transition: width 1.5s ease-in-out;
+    font-weight: bold;
+}
+
+.download:hover {
+    background: #fff !important;
+    color: #000 !important;
+    border: 2px solid #000 !important;
+}
+
+.contact:hover {
+    background: #000 !important;
+    color: #fff !important;
+    border: 2px solid #000 !important;
+}
+
+/* services */
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    color: #000;
+    background-color: #F4f4f4;
+    transition: all ease 700ms;
+}
+
+.icon-circle i {
+    font-size: 30px;
+}
+
+.service-card:hover .icon-circle {
+    color: white;
+    background-color: black;
+}
+
+/* PORTFolio */
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    color: black;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    background-color: white;
+    border-color: white;
+}
+
+.nav-tabs {
+    border-color: white !important;
+}
+
+.nav-tabs .nav-link {
+    color: #000;
+    font-weight: 500;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    transform: scale(.93);
+    border: 2px solid #f4f4f4;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    text-align: center;
+    opacity: 0;
+    transition: all ease 1.5s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+#ppp {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: black;
+    align-items: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease .7s;
+}
+
+#ppp:hover {
+    color: black;
+    background-color: white;
+    border: 1px black solid;
+}
+
+/* curosel */
+
+.cur-item-pic {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #e8dede;
+}
+
+.carousel-indicators .active {
+    background-color: #000;
+}
+
+/* team  */
+.item i {
+    font-size: 30px;
+}
+
+.overlay-team {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    transform: scale(.50);
+    border: 4px solid #f4f4f4;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    text-align: center;
+    opacity: 0;
+    transition: all ease .5s;
+}
+
+.col-md-4:hover .overlay-team {
+    transform: scale(.98) rotateY(180deg);
+    opacity: .9;
+}
+
+.team-img img {
+    transition: all ease 300ms;
+}
+
+.team-img:hover img {
+    transform: scale(1.2);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    transform: rotateY(180deg);
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: #fff;
+    color: #000;
+    border: 1px black solid;
+}
+
+/* contact */
+.custom-btn:hover {
+    background-color: #fff !important;
+    color: #000 !important;
+    border: 1px solid #000 !important;
+}
